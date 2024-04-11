@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from "cors";
 import { Router } from "./Routes/index.js";
 
+//configure dotenv
 dotenv.config();
 
 //initializing server
