@@ -1,6 +1,7 @@
 import express from "express";
 import { generateToken, isAuthorized } from "../Authenticate/Auth.js";
 import { transporter } from "../Mail/Mail.js";
+import dotenv from 'dotenv';
 import { addString, addUser, checkUser, deletingString, findingUser, getAllData, loginUser, resettingPassword } from "../Controllers/Pass.js";
 
 //using express.Router as common
@@ -79,7 +80,7 @@ router.post("/reset",async(req,res)=>{
                 //composing mail
                 const link=`https://tiny-marigold-47b3cb.netlify.app/reset/${generateString}`;
                 const composingMail={
-                    from:"sabarielangovan13@gmail.com",
+                    from: process.env.Email,
                     to:checkingUser.email,
                     subject:"Password Reset Link",
                     html:`<a href=${link}><button>Reset</button></a>`

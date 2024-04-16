@@ -1,10 +1,12 @@
 import { createTransport } from "nodemailer";
+import dotenv from 'dotenv';
 //using nodemailer to send mail for resetting password
 //creating transport
 export const transporter = createTransport({
-  service: "gmail",
+  host: "smtp-relay.brevo.com",
+  port: 587,
   auth: {
-    user: "sabarielangovan13@gmail.com",
-    pass: "password@123randomstuff",
+    user: process.env.Email,
+    pass: process.env.Password,
   },
 });
