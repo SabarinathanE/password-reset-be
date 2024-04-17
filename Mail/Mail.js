@@ -7,6 +7,6 @@ export const transporter = createTransport({
   port: 587,
   auth: {
     user: process.env.Email,
-    pass: process.env.Password,
+    pass: "xsmtpsib-9c5c432c7b55fc0cd4dc62dfadfa53780b4b85d91d50d5c0fb5c954ab83fdc84-XRvA3d9xsQHtOzEj",
   },
 });
