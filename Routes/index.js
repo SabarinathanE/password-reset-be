@@ -81,7 +81,7 @@ router.post("/reset",async(req,res)=>{
                 const link=`https://heroic-rugelach-4c2d45.netlify.app/reset/${generateString}`;
                 const composingMail={
                     from: process.env.Email,
-                    to:checkingUser.email,
+                    to:checkingUser.user,
                     subject:"Password Reset Link",
                     html:`<a href=${link}><button>Reset</button></a>`
                 }
