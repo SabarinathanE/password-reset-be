@@ -86,7 +86,6 @@ router.post("/reset",async(req,res)=>{
                     html:`<a href=${link}><button>Reset</button></a>`
                 }
                 //sendingMail
- 
                 transporter.sendMail(composingMail,(error,info)=>{
                     if(error){
                         console.log(error);
